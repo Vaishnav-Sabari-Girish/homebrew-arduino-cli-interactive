@@ -6,7 +6,7 @@ class Aci < Formula
   license "Apache-2.0"
 
   def install
-    bin.install "bash_shell_script/main.sh" => "aci"
+    bin.install "main.sh" => "aci"
   end
 
   test do
