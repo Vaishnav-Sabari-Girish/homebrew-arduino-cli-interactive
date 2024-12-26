@@ -1,8 +1,8 @@
 class Aci < Formula
   desc "Interactive Arduino-CLI for beginners transitioning from Arduino IDE"
   homepage "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive"
-  url "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/download/v1.0.1/aci_v1.0.1.tar.gz"
-  sha256 "5299935558172974fc89b027a62cc3390e7927d40c737b28f373b18c9cd3cc4a"
+  url "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/download/v1.0.2/aci_v1.0.2.tar.gz"
+  sha256 "eea1417f7950f267170728526ba6222ac10a423f7468c8b4b7be5aa5c0b58b07"
   license "Apache-2.0"
 
   def install
