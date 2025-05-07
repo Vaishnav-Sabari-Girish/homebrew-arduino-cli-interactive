@@ -7,7 +7,7 @@ class Aci < Formula
 
 
   def install
-    bin.install "main.sh" => "aci"
+    bin.install "bash_shell_scripts/main.sh" => "aci"
   end
 
   test do
