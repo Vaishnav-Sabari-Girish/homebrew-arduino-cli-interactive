@@ -11,7 +11,7 @@ class Aci < Formula
 
   def install
     # Verify the file exists before installing
-    raise "Missing bash_shell_script/main.sh in tarball" unless File.exist?("bash_shell_script/main.sh")
+    raise "main.sh in tarball" unless File.exist?("main.sh")
     libexec.install "main.sh" => "aci"
     libexec.install "examples"
     (bin/"aci").write <<~EOS
