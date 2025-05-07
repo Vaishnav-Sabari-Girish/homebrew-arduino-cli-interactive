@@ -15,8 +15,8 @@ class Aci < Formula
     libexec.install "main.sh" => "aci"
     libexec.install "examples"
     (bin/"aci").write <<~EOS
-      #!/bin/bash
-      cd "#{libexec}" && exec "#{libexec}/aci.sh" "$@"
+      #!/usr/bin/bash
+      cd "#{libexec}" && exec "#{libexec}/aci" "$@"
     EOS
   end
 
