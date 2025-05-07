@@ -10,10 +10,10 @@ class Aci < Formula
   depends_on "caarlos0/tap/timer"
 
   def install
-    # Install the main script and examples to libexec
+    # Verify the file exists before installing
+    raise "Missing bash_shell_script/main.sh in tarball" unless File.exist?("bash_shell_script/main.sh")
     libexec.install "bash_shell_script/main.sh" => "aci.sh"
     libexec.install "bash_shell_script/examples"
-    # Create a wrapper script to set the working directory
     (bin/"aci").write <<~EOS
       #!/bin/bash
       cd "#{libexec}" && exec "#{libexec}/aci.sh" "$@"
@@ -21,9 +21,7 @@ class Aci < Formula
   end
 
   test do
-    # Test the binary
-    system "#{bin}/aci", "--help"
-    # Test that examples directory was installed
+    system "#{bin}/aci"
     assert_predicate libexec/"examples/01.Basics/Blink/Blink.ino", :exist?
   end
 end
